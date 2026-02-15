@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Preview</title>
+<style>
+body{font-family:Arial;background:#f4f4f4}
+.grid{display:flex;gap:15px;flex-wrap:wrap;justify-content:center;margin-top:30px}
+img{width:150px;border-radius:8px}
+a{display:block;text-align:center;margin:30px auto;
+background:#4f46e5;color:white;padding:12px;width:260px;
+border-radius:8px;text-decoration:none;font-weight:bold}
+</style>
+</head>
+<body>
+
+<div class="grid">
+{% for img in previews %}
+<img src="/static/preview/{{ img }}">
+{% endfor %}
+</div>
+
+<a href="/download/{{ uid }}">⬇ Download Semua (ZIP)</a>
+
+</body>
+</html>

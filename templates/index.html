@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Background Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 340px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 12px;
+      cursor: pointer;
+    }
+    .color-box {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h3>Pas Foto Generator</h3>
+
+  <form method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" required>
+
+    <hr>
+
+    <label>
+      <input type="radio" name="mode" value="remove" checked>
+      Hapus Background
+    </label><br>
+
+    <label>
+      <input type="radio" name="mode" value="replace">
+      Ganti Background
+    </label>
+
+    <div class="color-box">
+      <label>Pilih warna background:</label><br>
+      <input type="color" name="bgcolor" value="#b40000">
+    </div>
+
+    <hr>
+
+<label>
+  <input type="checkbox" name="compress">
+  Compress Foto (Ukuran Lebih Kecil)
+</label>
+
+
+    <button type="submit">Generate</button>
+  </form>
+</div>
+
+</body>
+</html>
